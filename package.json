@@ -1,0 +1,42 @@
+{
+  "name": "viralib",
+  "version": "1.0.0",
+  "description": "css stylesheet",
+  "main": "dist/index",
+  "types": "dist/index",
+  "module": "dist/index",
+  "author": "",
+  "license": "ISC",
+  "private": false,
+  "homepage": "https://github.com/nikhilsarvaiyya/viralib#readme",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "rimraf dist && babel src --out-dir dist --copy-files",
+    "test" : "npx -p typescript tsc src/index.js --declaration --allowJs --emitDeclarationOnly --outDir types"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/nikhilsarvaiyya/viralib.git"
+  },
+  "keywords": [
+    "css",
+    "scss",
+    "web",
+    "Responsive"
+  ],
+  "bugs": {
+    "url": "https://github.com/nikhilsarvaiyya/viralib/issues"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.25.9",
+    "@babel/core": "^7.26.0",
+    "@babel/preset-env": "^7.26.0",
+    "@babel/preset-react": "^7.25.9"
+  },
+  "dependencies": {
+    "typescript": "^5.6.3"
+  }
+}
