@@ -1,7 +1,9 @@
-# VIRALIB
-
+### Install Package
 ```javascript
-
+npm install viralib
+```
+### Import package and add Component
+```javascript
 import { VRAButton } from 'viralib';
 
 <VRAButton
