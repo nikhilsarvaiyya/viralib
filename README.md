@@ -16,7 +16,7 @@ import { VRAButton } from 'viralib';
 
 ```
 ### Usages
-# Type
+## Type
 > button | submit
 ## as
 > link | outline | solid
@@ -28,8 +28,7 @@ import { VRAButton } from 'viralib';
 > xxs | xs | x(default) | xl | xxl
 ## style
 > Add style as per css guidelines
-
-### View
+## View
 <picture>
   <img alt="Button" src="https://github.com/nikhilsarvaiyya/viralib/blob/main/src/assets/img/button.png">
 </picture>
