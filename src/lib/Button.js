@@ -1,10 +1,24 @@
-
-function VRAButton({ id, name, type, value, label, size, disabled, as, color, style }) {
+function VRAButton({ id, name, type, value, label, size, disabled, as, color, style, iconStart, iconEnd }) {
     let c = color ? " " + color : "";
     let s = size ? " " + size : "";
     let a = as ? " " + as : "";
     
-    let css =  s + a + c;
+    
+    let data;
+    let buttonType = ""
+    if((iconStart || iconEnd) && label || label){
+        data = <>{iconStart} {label} {iconEnd}</>;
+        buttonType = " vra-button-text"
+    } else if((iconStart || iconEnd)){
+        data = <>{iconStart} {iconEnd}</>;
+        buttonType = " vra-button-icon"
+    } else {
+        data = <>{label || "Button"}</>;
+        buttonType = " vra-button-text"
+    }
+
+    let css = buttonType + s + a + c;
+
     return <button
         id={id}
         className={"vra-button" + css}
@@ -14,7 +28,16 @@ function VRAButton({ id, name, type, value, label, size, disabled, as, color, st
         value={value}
         disabled={disabled || false}
     >
-        {label || type || "Button"}
+        {data}
+        
     </button>
 }
 module.exports = VRAButton
+
+
+
+// Variant : solid | outline | link 
+// color : red / danger | green / success | blue / info | orange / warning | black | white
+// size
+// disabled
+// loading

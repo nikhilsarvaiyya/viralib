@@ -1,6 +1,6 @@
 {
   "name": "viralib",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "css stylesheet",
   "main": "dist/index",
   "types": "dist/index",
@@ -15,7 +15,9 @@
   ],
   "scripts": {
     "build": "rimraf dist && babel src --out-dir dist --copy-files",
-    "test" : "npx -p typescript tsc src/index.js --declaration --allowJs --emitDeclarationOnly --outDir types"
+    "test": "npx -p typescript tsc src/index.js --declaration --allowJs --emitDeclarationOnly --outDir types",
+    "sass-dev": "sass -w src/assets/scss:dist/css",
+    "dev": "concurrently --kill-others \"npm run sass-dev\" \"npm run build\""
   },
   "repository": {
     "type": "git",
@@ -37,6 +39,7 @@
     "@babel/preset-react": "^7.25.9"
   },
   "dependencies": {
+    "concurrently": "^9.1.0",
     "typescript": "^5.6.3"
   }
 }
