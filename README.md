@@ -1,7 +1,9 @@
-# VIRALIB
-
+### Install Package
 ```javascript
-
+npm install viralib
+```
+### Import package and add Component
+```javascript
 import { VRAButton } from 'viralib';
 
 <VRAButton
@@ -16,7 +18,7 @@ import { VRAButton } from 'viralib';
 
 ```
 ### Usages
-# Type
+## Type
 > button | submit
 ## as
 > link | outline | solid
@@ -28,3 +30,8 @@ import { VRAButton } from 'viralib';
 > xxs | xs | x(default) | xl | xxl
 ## style
 > Add style as per css guidelines
+## View
+<picture>
+  <img alt="Button" src="https://github.com/nikhilsarvaiyya/viralib/blob/main/src/assets/img/button.png">
+</picture>
+
