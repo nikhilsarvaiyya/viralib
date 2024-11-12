@@ -1,6 +1,6 @@
 {
   "name": "viralib",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "css stylesheet",
   "main": "dist/index",
   "types": "dist/index",
