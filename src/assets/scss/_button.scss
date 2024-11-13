@@ -1,0 +1,162 @@
+@use 'color';
+@use 'size';
+/* Default */
+.vra-button {
+    border: 1px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 4px ;
+    text-align: center;
+    padding: 4px;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content:center;
+    background-color: color.$light;
+    color: color.$dark;
+    svg{
+        height: 16px;
+        width: 16px;
+        margin: 0 4px;
+       
+    }
+    &.vra-button-icon{
+        padding: 4px;
+        svg{
+            height: 24px;
+            width: 24px;
+        }
+    }
+    &.vra-button-text{
+        padding: 8px 20px;
+        min-width: 90px;
+        
+    }
+    &:hover{
+        background-color: color.$dark;
+        color: color.$light;
+        svg{
+            fill: color.$svg-light;
+        }
+    }
+}
+
+
+/* Color */
+.vra-button {   
+     &.red, &.danger {background: color.$red;
+        svg{fill: color.$svg-light;}
+     } 
+     &.green, &.success {background: color.$green;
+        svg{fill: color.$svg-light;}
+     } 
+     &.blue, &.info{background: color.$blue;
+        svg{fill: color.$svg-light;}
+     } 
+     &.orange, &.warning{background: color.$orange;
+        svg{fill: color.$svg-light;}
+     } 
+     &.black{background: color.$black;
+        svg{fill: color.$svg-light;}
+     }  
+     &.white{background: color.$white;
+        svg{fill: color.$svg-dark;}
+     } 
+     &:hover{ filter: brightness(115%);} 
+    &.solid{
+        color:color.$white;
+        background: color.$primary;
+        &.red, &.danger {background: color.$red;}  
+        &.green, &.success{background: color.$green;}     
+        &.blue, &.info{background: color.$blue;}
+        &.orange, &.warning{background: color.$orange;}
+        &.black{background: color.$black;}
+        &.white{background: color.$white;}
+        &:hover{ filter: brightness(115%);} 
+        svg{fill : color.$svg-light}
+    }
+    &.outline{
+        background: transparent;
+        border: 1px solid color.$primary;
+        &.red, &.danger {
+            color: color.$red;border: 1px solid color.$red;
+            &:hover{background: color.$red;}
+            svg{fill:color.$red;}
+        }  
+        &.green, &.success{
+            color: color.$green;border: 1px solid color.$green;
+            &:hover{background: color.$green;}
+            svg{fill:color.$green;}
+        }     
+        &.blue, &.info{
+            color: color.$blue;border: 1px solid color.$blue;
+            &:hover{background: color.$blue;}
+            svg{fill:color.$blue;}
+        }
+        &.orange, &.warning{
+            color: color.$orange;border: 1px solid color.$orange;
+            &:hover{background: color.$orange;}
+            svg{fill:color.$orange;}
+        }
+        &.black{
+            color: color.$black;border: 1px solid color.$black;
+            &:hover{background: color.$black;}
+            svg{fill:color.$black;}
+        }
+        &.white{
+            color: color.$white;border: 1px solid color.$white;
+            &:hover{background: color.$white;color: color.$black;}
+            svg{fill:color.$white;}
+        }
+        &:hover{color: color.$white; background: color.$primary;}
+        &:hover svg{fill: color.$white;}
+        
+        
+    }
+    &.link{
+        background: transparent;
+        
+        &.red, &.danger {
+            color: color.$red; svg{fill :color.$red};
+            &:hover{background: color.$red; svg{fill :color.$svg-light};}
+          
+        }  
+        &.green, &.success{
+            color: color.$green;svg{fill :color.$green};
+            &:hover{background: color.$green;svg{fill :color.$svg-light};}
+        }     
+        &.blue, &.info{
+            color: color.$blue;svg{fill :color.$blue};
+            &:hover{background: color.$blue;svg{fill :color.$svg-light};}
+        }
+        &.orange, &.warning{
+            color: color.$orange;svg{fill :color.$orange};
+            &:hover{background: color.$orange;svg{fill :color.$svg-light};}
+        }
+        &.black{
+            color: color.$black;svg{fill :color.$black};
+            &:hover{background: color.$black;svg{fill :color.$svg-light};}
+        }
+        &.white{
+            color: color.$white;svg{fill :color.$white};
+            &:hover{background: color.$white;svg{fill :color.$svg-dark};}
+        }
+        &:hover{color:color.$white; background: color.$primary;}
+
+    }
+    &:disabled{
+        opacity: 0.4;
+        cursor:no-drop;
+        &:hover{
+            color:color.$dark;
+            background: color.$light;
+        }
+        svg{
+            fill:color.$dark
+        }
+    }
+}
+
+/* Size */
+
+

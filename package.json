@@ -14,7 +14,7 @@
     "README.md"
   ],
   "scripts": {
-    "build": "rimraf dist && babel src --out-dir dist --copy-files",
+    "build": "rimraf dist && babel src/build-dist --out-dir dist --copy-files",
     "test": "npx -p typescript tsc src/index.js --declaration --allowJs --emitDeclarationOnly --outDir types",
     "sass-dev": "sass -w src/assets/scss:dist/css",
     "dev": "concurrently --kill-others \"npm run sass-dev\" \"npm run build\""

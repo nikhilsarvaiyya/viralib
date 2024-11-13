@@ -1,0 +1,100 @@
+@mixin wh($size) {
+    width: $size;
+    height: $size;
+}
+@mixin btn($x,$y,$font,$wid:0) {
+    padding: $x $y !important;
+    font-size: $font !important;
+    @if $wid != 0 {
+        min-width: $wid !important;
+    }
+}
+.xxs {
+    &.vra-button {
+        @include btn(3px,7px,7px,30px);
+    }
+
+    &.vra-avatar {
+        @include wh(16px);
+    }
+
+    &.vra-display-alpha {
+        @include wh(16px);
+        @include btn(3px,0px,8px,0);
+    }
+}
+
+.xs {
+    &.vra-button {
+        @include btn(4px,10px,10px,50px);
+    }
+
+    &.vra-avatar {
+        @include wh(24px);
+    }
+
+    &.vra-display-alpha {
+        @include wh(24px);
+        @include btn(5px,0px,12px,0);
+    }
+}
+
+.s {
+    &.vra-button {
+        @include btn(6px,15px,12px,70px);
+    }
+
+    &.vra-avatar {
+        @include wh(32px);
+    }
+
+    &.vra-display-alpha {
+        @include wh(32px);
+        @include btn(7px,0px,16px,0);
+    }
+}
+
+.l {
+    &.vra-button {
+        @include btn(12px,30px,18px,110px);
+    }
+
+    &.vra-avatar {
+        @include wh(48px);
+    }
+
+    &.vra-display-alpha {
+        @include wh(48px);
+        @include btn(11px,0px,24px,0);
+    }
+}
+
+.xl {
+    &.vra-button {
+        @include btn(14px,35px,20px,130px);
+    }
+
+    &.vra-avatar {
+        @include wh(56px);
+    }
+
+    &.vra-display-alpha {
+        @include wh(56px);
+        @include btn(13px,0px,28px,0);
+    }
+}
+
+.xxl {
+    &.vra-button {
+        @include btn(16px,40px,22px,150px);
+    }
+
+    &.vra-avatar {
+        @include wh(64px);
+    }
+
+    &.vra-display-alpha {
+        @include wh(64px);
+        @include btn(14px,0px,34px,0);
+    }
+}
