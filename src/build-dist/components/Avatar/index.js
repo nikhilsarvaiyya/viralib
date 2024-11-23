@@ -25,7 +25,7 @@ function VRAAvatar({ src, type, zIndex, alt, style,size }) {
 function VRAAvatarGroup(props) {
     const { max, children, type } = props;
 
-    let maxImg = children?.length > max ? <span class={`avatar-count ${type}`}>+{children.length - max}</span> : "";
+    let maxImg = children?.length > max ? <span className={`avatar-count ${type}`}>+{children.length - max}</span> : "";
 
     let chainImg = children.map((item, i) => {
         if (max && i < max) {
@@ -36,7 +36,7 @@ function VRAAvatarGroup(props) {
 
     })
 
-    let renderView = <div class="vra-avatar-img-group">{chainImg} {maxImg}</div>
+    let renderView = <div className="vra-avatar-img-group">{chainImg} {maxImg}</div>
     return renderView
 
 }
